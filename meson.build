@@ -42,7 +42,7 @@ else
   build_args += '-DMYLIB_PUBLIC=__attribute__((visibility("default")))'
 endif
 
-project_target = shared_library(
+project_target = static_library(
   meson.project_name(),
   project_source_files,
   install : true,
