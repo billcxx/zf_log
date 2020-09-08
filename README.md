@@ -165,6 +165,25 @@ corresponding CMakeLists.txt file add:
 target_link_libraries(my_target zf_log)
 ```
 
+### Embedding with Meson
+
+Using zf_log with the Meson build system is easy with only two steps.
+1. add `zf_log.wrap` file to the `subprojects` directory in your meson project. The `zf_log.wrap` should like this
+```meson
+[wrap-git]
+url=https://github.com/billcxx/zf_log.git
+revision=master
+
+[provides]
+dependency_names=zf_log_dep
+```
+2. add the following links to your `meson.build` file. *zf_log_dep* is what you need to pass or add to the *dependencies* options for the library or executable that your building.
+```
+zf_log = subproject('zf_log')
+zf_log_dep = dependency('zf_log')
+```
+
+
 ### Installation
 
 Another option is to build and install the library:
