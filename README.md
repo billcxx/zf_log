@@ -177,7 +177,7 @@ revision=master
 [provides]
 dependency_names=zf_log_dep
 ```
-2. add the following links to your `meson.build` file. *zf_log_dep* is what you need to pass or add to the *dependencies* options for the library or executable that your building.
+2. add the following lines to your `meson.build` file. *zf_log_dep* is what you need to pass or add to the *dependencies* options for the library or executable that your building.
 ```
 zf_log = subproject('zf_log')
 zf_log_dep = dependency('zf_log')
