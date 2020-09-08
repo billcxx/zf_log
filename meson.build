@@ -85,7 +85,7 @@ if not meson.is_subproject()
     test(f,
         executable(
         f,
-        files('test/'+f+'.c'),
+        files('tests/'+f+'.c'),
         dependencies : [project_dep, test_dep],
         install : false
         )
