@@ -38,6 +38,7 @@ public_headers = include_directories('zf_log')
 build_args += [
   '-DPROJECT_NAME=' + meson.project_name(),
   '-DPROJECT_VERSION=' + meson.project_version(),
+  '-DNDEBUG'
 ]
 
 # Only make public interfaces visible
