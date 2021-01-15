@@ -2,7 +2,7 @@ module zf_log
     use iso_c_binding
     implicit none
     interface
-        subroutine zf_logd_c(text) bind(c,name="zf_logd")
+        subroutine zf_logd_c(text) bind(c,name="zf_logd_f")
             use,intrinsic::iso_c_binding, only: c_char
             character(kind=c_char),intent(in),dimension(*) :: text
         end subroutine

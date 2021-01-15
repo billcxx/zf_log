@@ -16,6 +16,7 @@ project_headers = [
 
 project_source_files = [
   'zf_log/zf_log.c',
+  'zf_log/zf_log_f.c',
   'zf_log/zf_log.f90'
 ]
 
