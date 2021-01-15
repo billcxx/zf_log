@@ -5,6 +5,9 @@ project(
   license:['MIT'],
   default_options : ['warning_level=3']
 )
+
+add_languages('fortran')
+
 project_description = 'Core logging library for C, Ojective-C and C++ '
 
 project_headers = [
@@ -12,7 +15,8 @@ project_headers = [
 ]
 
 project_source_files = [
-  'zf_log/zf_log.c'
+  'zf_log/zf_log.c',
+  'zf_log/zf_log.f90'
 ]
 
 project_test = [
